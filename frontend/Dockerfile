@@ -7,7 +7,7 @@ WORKDIR /app
 WORKDIR /app/frontend
 
 # Install deps first (for cache reuse)
-COPY frontend/package*.json .
+COPY package*.json .
 
 RUN npm install
 
