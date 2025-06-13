@@ -30,7 +30,7 @@ ENV NODE_ENV production
 WORKDIR /app/frontend
 
 # Install only production deps
-COPY --from=builder /app/frontend/package*.json .
+COPY --from=builder /app/frontend/package*.json ./
 
 RUN npm install --production
 
