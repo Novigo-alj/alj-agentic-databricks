@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import handleAudioLoop from "./handleAudioLoop";
 import { isWaitingForSupervisorRef,
   holdMusicStartedAtRef,
