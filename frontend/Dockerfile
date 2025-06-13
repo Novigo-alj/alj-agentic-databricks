@@ -14,8 +14,8 @@ RUN npm install
 # Then copy rest of files and build
 COPY . .
 
-ARG OPENAI_API_KEY   # 1. Declare that the Dockerfile expects a build argument
-ENV OPENAI_API_KEY=$OPENAI_API_KEY # 2. Set it as an environment variable inside the container
+ARG OPENAI_API_KEY   
+ENV OPENAI_API_KEY=$OPENAI_API_KEY 
 
 RUN npm run build
 
