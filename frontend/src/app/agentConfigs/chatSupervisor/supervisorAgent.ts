@@ -10,7 +10,15 @@ async function fetchChatCompletionMessage(body: any) {
   console.log("Calling the mosaic AI end point")
   // await delay(12000); // simulate 12-second delay
 
-  const response = await fetch("http://localhost:3001/api/databricks-proxy", {
+  const API_BASE_URL =
+            process.env.NODE_ENV === "development"
+            ? "http://localhost:3001/api/databricks-proxy"
+            : "https://alj-agentic-databricks.onrender.com/api/databricks-proxy";
+
+  console.log(API_BASE_URL)
+
+
+  const response = await fetch(API_BASE_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
