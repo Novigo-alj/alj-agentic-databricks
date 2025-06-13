@@ -54,8 +54,8 @@ function filterTranscriptLogs(transcriptLogs: any[]) {
       continue;
     }
     if (item.type === "MESSAGE") {
-      const { guardrailResult, expanded, ...rest } = item;
-      filtered.push(rest);
+      // const { guardrailResult, expanded, ...rest } = item;
+      // filtered.push(rest);
     } else {
       filtered.push(item);
     }
