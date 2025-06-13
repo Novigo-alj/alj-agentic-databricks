@@ -54,14 +54,18 @@ function filterTranscriptLogs(transcriptLogs: any[]) {
       continue;
     }
     if (item.type === "MESSAGE") {
-      // const { guardrailResult, expanded, ...rest } = item;
-      // filtered.push(rest);
+      const { guardrailResult, expanded, ...rest } = item;
+      filtered.push(rest);
+      console.log(guardrailResult)
+      console.log(expanded)
     } else {
       filtered.push(item);
     }
   }
   return filtered;
 }
+
+
 
 export async function getNextResponseFromSupervisor(
   {
