@@ -14,8 +14,8 @@ RUN npm install
 # Then copy rest of files and build
 COPY . .
 
-ARG OPENAI_API_KEY   
-ENV OPENAI_API_KEY=$OPENAI_API_KEY 
+ARG OPENAI_API_KEY
+ENV OPENAI_API_KEY=$OPENAI_API_KEY
 
 RUN npm run build
 
