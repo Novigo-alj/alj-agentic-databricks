@@ -9,7 +9,7 @@ COPY package*.json ./
 RUN npm install --production
 
 # Now COPY rest of backend code
-COPY backend/ .
+COPY . .
 
 ENV PORT 8080
 EXPOSE 8080
