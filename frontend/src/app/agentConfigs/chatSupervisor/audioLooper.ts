@@ -5,7 +5,7 @@ export class AudioLooper {
   constructor(audioSrc: string) {
     this.audio = new Audio(audioSrc);
     this.audio.loop = true;
-    this.audio.volume = 0.25;
+    this.audio.volume = 0.125;
   }
 
   async play() {
@@ -13,7 +13,7 @@ export class AudioLooper {
       // Fade volume in smoothly before playing
       this.audio.volume = 0;
       await this.audio.play();
-      this.fadeVolume(0, 0.25, this.fadeDuration);
+      this.fadeVolume(0, 0.125, this.fadeDuration);
     } catch (err) {
       console.warn("Audio play failed:", err);
     }
