@@ -14,7 +14,7 @@ app.use(cors());  // Enable CORS for local dev if frontend is on a different por
 
 app.post('/api/databricks-proxy', async (req, res) => {
   try {
-    const response = await fetch("https://dbc-73841bd4-d7dd.cloud.databricks.com/serving-endpoints/agents_datalink-lineagedemo-alj_chatservice_agent/invocations", {
+    const response = await fetch("https://dbc-f628c213-5850.cloud.databricks.com/serving-endpoints/agents_datalink-lineagedemo-alj_service_agent/invocations", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${process.env.DATABRICKS_TOKEN}`,
