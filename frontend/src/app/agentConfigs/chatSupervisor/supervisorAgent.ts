@@ -13,7 +13,7 @@ async function fetchChatCompletionMessage(body: any) {
   const API_BASE_URL =
             process.env.NODE_ENV === "development"
             ? "http://localhost:3001/api/databricks-proxy"
-            : "https://alj-agentic-databricks-560890946691.europe-west1.run.app/api/databricks-proxy";
+            : "https://alj-agentic-databricks-backend-578292646158.europe-west1.run.app/api/databricks-proxy";
 
   console.log(API_BASE_URL)
 
