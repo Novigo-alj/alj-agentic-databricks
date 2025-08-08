@@ -33,5 +33,5 @@ app.post('/api/databricks-proxy', async (req, res) => {
 });
 
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 app.listen(port, () => console.log('Proxy server running on port 3001'));
